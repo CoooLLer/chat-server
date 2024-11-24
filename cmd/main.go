@@ -28,12 +28,12 @@ func (s *server) Create(_ context.Context, in *desc.CreateChatIn) (*desc.CreateC
 
 func (s *server) Delete(_ context.Context, in *desc.DeleteChatIn) (*emptypb.Empty, error) {
 	log.Printf("Delete Chat: %v", in)
-	return nil, nil
+	return &emptypb.Empty{}, nil
 }
 
 func (s *server) SendMessage(_ context.Context, in *desc.SendMessageIn) (*emptypb.Empty, error) {
 	log.Printf("Send Message: %v", in)
-	return nil, nil
+	return &emptypb.Empty{}, nil
 }
 
 func main() {
